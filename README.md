@@ -1,1 +1,1 @@
-# bottcamp-group-project-2
+# bootcamp-group-project-2
