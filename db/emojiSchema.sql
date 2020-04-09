@@ -1,0 +1,5 @@
+DROP DATABASE IF EXISTS `emojiDB`;
+
+CREATE DATABASE `emojiDB`;
+
+USE `emojiDB`;

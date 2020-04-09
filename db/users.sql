@@ -1,0 +1,6 @@
+DROP DATABASE IF EXISTS `usersDB`;
+
+CREATE DATABASE `usersDB`;
+
+USE `usersDB`;
+

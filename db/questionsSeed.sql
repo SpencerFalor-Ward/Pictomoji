@@ -1,0 +1,1 @@
+INSERT INTO `questions` (question, answer) VALUES ("question text", "answer text")
