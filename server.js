@@ -1,8 +1,9 @@
 const express = require("express")
 const passport = require("passport")
 const session = require("express-session")
-const db = require("./app/models")
-const authRoute = require("./app/routes/auth.js")
+const db = require("./models")
+const authRoute = require("./routes/auth.js")
+const apiRoute = require("./routes/apiRoute.js")
 
 const app = express()
 
@@ -27,15 +28,16 @@ var exphbs = require("express-handlebars")
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }))
 app.set("view engine", "handlebars")
-app.set("views", __dirname + "/app/views")
+// app.set('views', __dirname + 'views')
 
 app.get("/", (req, res) => {
 	res.render("index")
 })
 
 authRoute(app, passport)
+apiRoute(app)
 
-require("./app/config/passport.js")(passport, db.User)
+require("./config/passport.js")(passport, db.User)
 
 db.sequelize.sync().then(
 	app.listen(PORT, function () {
