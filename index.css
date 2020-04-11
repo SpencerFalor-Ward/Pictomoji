@@ -1,0 +1,42 @@
+/*background-color: #2d53fc;
+background-color: #2d31fc;
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}*/
+
+body{
+    text-align: center;
+    line-height:30px;
+    background-color: #2d8efc;
+    position: relative;
+}
+
+.navbar {
+    border: solid black;
+}
+
+#signUp {
+    border: solid green;
+}
+
+#opening {
+    border: solid pink;
+}
+
+#gameplay{
+    border: solid yellow;
+}
+
+#signUp, 
+#opening,
+#gameplay {
+    width: 600px;
+    height: auto;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%);
+    display: flex;
+}
