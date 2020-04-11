@@ -21,7 +21,17 @@ var score = 0;
 
 function startGame(){
     startBtn.addEventListener("click", () => {
-        
+
+        interval = setInterval(function(){
+            if(time === 0){
+                showScore();
+                return;
+            }
+    
+            time--;
+            timer.textContent = time
+        }, 1000)
+
     })
 }
 
@@ -29,4 +39,10 @@ function badInput(){
     inputEl.addEventListener("click", function(){
         
     })
+}
+
+function showScore(){
+    clearInterval(interval);
+    scoreNum.textContent = `Score: ${score}`
+=======
 }
