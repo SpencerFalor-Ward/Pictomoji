@@ -31,6 +31,7 @@ function startGame(){
             time--;
             timer.textContent = time
         }, 1000)
+
     })
 }
 
@@ -43,4 +44,5 @@ function badInput(){
 function showScore(){
     clearInterval(interval);
     scoreNum.textContent = `Score: ${score}`
+=======
 }
