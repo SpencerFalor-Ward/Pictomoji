@@ -1,4 +1,4 @@
-var db = require("../models");
+    var db = require("../models");
 
 // ajax query to populate emojiDB from emojidex
 
