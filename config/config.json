@@ -1,24 +1,24 @@
 {
-	"development": {
+	"user": {
 		"username": "root",
 		"password": "root",
-		"database": "sweet_app",
+		"database": "userDB",
 		"host": "127.0.0.1",
 		"dialect": "mysql",
 		"operatorsAliases": false
 	},
-	"test": {
+	"questions": {
 		"username": "root",
-		"password": null,
-		"database": "database_test",
+		"password": "root",
+		"database": "questionsDB",
 		"host": "127.0.0.1",
 		"dialect": "mysql",
 		"operatorsAliases": false
 	},
-	"production": {
+	"emoji": {
 		"username": "root",
-		"password": null,
-		"database": "database_production",
+		"password": "root",
+		"database": "emojiDB",
 		"host": "127.0.0.1",
 		"dialect": "mysql",
 		"operatorsAliases": false

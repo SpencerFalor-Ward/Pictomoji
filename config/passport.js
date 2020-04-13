@@ -26,9 +26,9 @@ module.exports = function (passport, user) {
 
 							password: password,
 
-							firstName: req.body.firstname,
+							// firstName: req.body.firstname,
 
-							lastName: req.body.lastname,
+							// lastName: req.body.lastname,
 						}
 
 						User.create(data).then(function (newUser) {
@@ -65,10 +65,14 @@ module.exports = function (passport, user) {
 						.then(user => {
 							console.log(password)
 							if (!user) {
-								return done(null, false, { message: "Incorrect username." })
+								return done(null, false, {
+									message: "Incorrect username.",
+								})
 							}
 							if (!user.isValidPassword(password)) {
-								return done(null, false, { message: "Incorrect password." })
+								return done(null, false, {
+									message: "Incorrect password.",
+								})
 							}
 							return done(null, user)
 						})
