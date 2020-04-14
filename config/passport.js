@@ -65,10 +65,14 @@ module.exports = function (passport, user) {
 						.then(user => {
 							console.log(password)
 							if (!user) {
-								return done(null, false, { message: "Incorrect username." })
+								return done(null, false, {
+									message: "Incorrect username.",
+								})
 							}
 							if (!user.isValidPassword(password)) {
-								return done(null, false, { message: "Incorrect password." })
+								return done(null, false, {
+									message: "Incorrect password.",
+								})
 							}
 							return done(null, user)
 						})

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Pictogram</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!--Nav Bar (will show the entire time)-->
+    <header>
+        <div class="navbar">
+            <h1 id="gameName">Pictomoji</h1>
+            <nav>
+                <ul>
+                    <li id="rulesButton">Rules</li>
+                    <li id="leaderboard">LeaderBoard</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--Sign up-->
+    <form>
+        <div id="signUp">
+            <p>Enter Username</p>
+            <input type="text" placeholder="Username" required>
+        </div>
+    </form>
+
+    <!--Opening-->
+    <div id="opening">
+        <!--Opening text-->
+        <h4>Rules or some stuff</h4>
+        <!--Start button-->
+        <button id="start" onclick="startGame()">Start</button>
+    </div>
+
+    <!--Game container-->
+    <div id="bodyContainer">
+        <div id="gameplay">
+            <!--Timer-->
+            <div id="timer" class="timer">
+                Time Left: <span id="timeRem">0</span>
+            </div>
+
+            <!--Question-->
+            <div id="questionOutput">How many potatoes does it take?</div>
+
+            <div id="inputSect">
+                <!--Player Input-->
+                <div id="input">
+                    <input type="text" placeholder="Answer Here!" required>
+                </div>
+        
+                <!--Submit answer button-->
+                <button id="submit">Submit</button>
+            </div>
+        </div>
+
+        <!--Answer Reveal Output-->
+        <div id="answers">
+            <!--Answer in plain text-->
+            <div id="answerOutput" class="output"></div>
+            <!--Answer as an emoji-->
+            <div id="emojiOutput" class="output"></div>
+        </div>
+
+
+    </div>
+
+    <!--JS sources-->
+    <script src="index.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

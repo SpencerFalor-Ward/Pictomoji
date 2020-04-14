@@ -1,1 +1,1 @@
-INSERT INTO `questions` (question, answer) VALUES ("question text", "answer text")
+INSERT INTO questions (questions, answers, difficulty, createdAt, updatedAt) VALUES ("1f957", "answer text", 1, 0 ,0);

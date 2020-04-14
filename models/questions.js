@@ -5,10 +5,14 @@ module.exports = (sequelize, DataTypes) => {
 		questions: {
 			type: DataTypes.TEXT,
 			allowNull: false
-	},
+		},
 		answers: {
 			type: DataTypes.TEXT,
 			allowNull: false,
+		},
+		difficulty: {
+			type: DataTypes.INTEGER,
+			allowNull: false
 		},	
     });    
 
