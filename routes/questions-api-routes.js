@@ -22,8 +22,17 @@ module.exports = function (app) {
 			// res.json(data)
 			console.log(questions)
 			// console.log(Question[0].dataValues.questions)
-			res.render("index", { questionsTable: questions })
+			// questions = String.fromCodePoint('0x' + questions)
+			let temp = []
+			questions.forEach(el => {
+				let question = String.fromCodePoint("0x" + el.questions)
+				temp.push(question)
+			})
+
+			res.render("index", { questionsTable: temp })
 			// res.json([])
+			// var fixedEmoji = emojiList[EMOJI].unicode.substr(0, 5)
+			// var emojiIcon = String.fromCodePoint('0x' + fixedEmoji)
 		})
 		// db.Question.findOne({
 		// 	// parameters for selecting question
@@ -31,4 +40,5 @@ module.exports = function (app) {
 		// 	// render question to question location
 		// })
 	})
+	app.post("/api/questionsInput/", function () {})
 }

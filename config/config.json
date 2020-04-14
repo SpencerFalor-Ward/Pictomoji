@@ -1,24 +1,24 @@
 {
-	"user": {
+	"development": {
 		"username": "root",
 		"password": "root",
-		"database": "userDB",
+		"database": "usersDB",
 		"host": "127.0.0.1",
 		"dialect": "mysql",
 		"operatorsAliases": false
 	},
-	"questions": {
+	"test": {
 		"username": "root",
 		"password": "root",
-		"database": "questionsDB",
+		"database": "usersDB",
 		"host": "127.0.0.1",
 		"dialect": "mysql",
 		"operatorsAliases": false
 	},
-	"emoji": {
+	"production": {
 		"username": "root",
 		"password": "root",
-		"database": "emojiDB",
+		"database": "usersDB",
 		"host": "127.0.0.1",
 		"dialect": "mysql",
 		"operatorsAliases": false
