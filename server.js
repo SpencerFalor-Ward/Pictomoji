@@ -3,7 +3,7 @@ const passport = require("passport")
 const session = require("express-session")
 const db = require("./models")
 const authRoute = require("./routes/auth.js")
-const apiRoute = require("./routes/apiRoute.js")
+const questionsApiRoutes = require("./routes/questions-api-routes")
 
 const app = express()
 
@@ -35,12 +35,12 @@ app.get("/", (req, res) => {
 })
 
 authRoute(app, passport)
-apiRoute(app)
 
 require("./config/passport.js")(passport, db.User)
 
 db.sequelize.sync().then(
 	app.listen(PORT, function () {
+		questionsApiRoutes(app)
 		console.log("App listening on PORT " + PORT)
 	}),
 )
