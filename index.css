@@ -10,33 +10,112 @@ background-color: #2d31fc;
 body{
     text-align: center;
     line-height:30px;
-    background-color: #2d8efc;
+    background-color: #5dcca7;
     position: relative;
 }
 
-.navbar {
-    border: solid black;
+.navbar{
+    margin-top: 10px;
 }
 
-#signUp {
-    border: solid green;
+#rulesButton,
+#leaderboard{
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 20px;
+    border: solid 2px;
+    border-color: rgb(139, 46, 46);
+    padding: 5px;
+    background-color: rgb(139, 46, 46);
+    border-radius: 10px;
 }
 
-#opening {
-    border: solid pink;
+h1{
+    font-size: 40px;
 }
 
-#gameplay{
-    border: solid yellow;
+header{
+    width: 20%;
+    height: 720px;
+    background-color: rgb(252, 89, 89);
+    float: left;
 }
 
-#signUp, 
-#opening,
-#gameplay {
-    width: 600px;
-    height: auto;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%);
-    display: flex;
+#bodyContainer{
+    float: right;
+    width: 80%;
+    height: 720px;
+    background-color: salmon;
+}
+
+.timer{
+    float: right;
+    margin-right: 10px;
+    font-size: 20px;
+    border-style: double;
+    border-color: rgb(255, 18, 18);
+    border-width: 5px;
+    padding: 3px;
+}
+
+#questionOutput{
+    font-size: 40px;
+    margin: 10px;
+}
+
+#inputSect{
+    width: 35%;
+    margin-top: 15%;
+    height: 200px;
+}
+
+#input input{
+    height: 170px;
+    outline: none;
+    background-color: rgb(255, 205, 199);
+    border-style: double;
+    border-width: 7px;
+    border-radius: 10px;
+    width: 70%;
+    text-align: center;
+    border-color: rgb(255, 18, 18);
+    font-size: 20px;
+    outline: none;
+}
+
+input::placeholder{
+    color: black;
+    font-size: 20px;
+}
+
+#inputSect button{
+    height: 30px;
+    border-color: rgb(255, 108, 108);
+    border-style: solid;
+    font-size: 17px;
+    width: 30%;
+    background-color: rgb(255, 205, 199);
+    margin-top: 5px;
+    padding: 3px;
+    outline: none;
+}
+
+#answers{
+    width: 35%;
+    height: 200px;
+    background-color: chartreuse;
+    margin: 5px;
+    margin-left: 50%;
+}
+
+
+
+
+
+form{
+    display: none;
+}
+
+#opening{
+    display: none;
 }
