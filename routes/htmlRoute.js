@@ -17,10 +17,10 @@ module.exports = function (app) {
 		res.render("index")
 	})
 
-	// // scores route loads scores.html
-	// app.get('/scores', function (req, res) {
-	// 	res.sendFile(path.join(__dirname, '../views/scores.html'))
-	// })
+	// questions route loads questionsInput.handlebars
+	app.get("/questionsInput", function (req, res) {
+		res.render("questionsInput.handlebars")
+	})
 
 	// // game route loads game.html
 	// app.get('/game', function (req, res) {

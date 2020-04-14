@@ -40,5 +40,15 @@ module.exports = function (app) {
 		// 	// render question to question location
 		// })
 	})
-	app.post("/api/questionsInput/", function () {})
+	app.post("/api/questionsInput/", function (req, res) {
+		console.log("Question Data:")
+		console.log(req.body)
+		db.Question.create({
+			questions: req.body.questions,
+			answers: req.body.answers,
+			difficulty: req.body.difficulty,
+		}).then(questionInput => {
+			res.json(questionInput)
+		})
+	})
 }

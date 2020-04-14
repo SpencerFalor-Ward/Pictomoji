@@ -3,7 +3,8 @@ const passport = require("passport")
 const session = require("express-session")
 const db = require("./models")
 const authRoute = require("./routes/auth.js")
-const questionsApiRoutes = require("./routes/questions-api-routes")
+const questionsApiRoutes = require("./routes/questions-api-routes.js")
+const htmlRoute = require("./routes/htmlRoute.js")
 
 const app = express()
 
@@ -35,6 +36,7 @@ app.get("/", (req, res) => {
 })
 
 authRoute(app, passport)
+htmlRoute(app)
 
 require("./config/passport.js")(passport, db.User)
 
