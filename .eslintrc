@@ -8,6 +8,7 @@
 	"env": {
 		"browser": true,
 		"jest": true,
-		"node": true
+		"node": true,
+		"jquery": true
 	}
 }
