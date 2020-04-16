@@ -1,1 +1,6 @@
 test
+
+removed from lintstage for committing
+ "*.+(css)":[
+        "stylelint"
+    ],
