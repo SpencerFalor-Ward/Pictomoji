@@ -1,3 +1,5 @@
+const selected = require("../../../routes/questions-api-routes")
+
 // Start Button
 // var startBtn = document.getElementById("start");
 
@@ -15,6 +17,47 @@
 // var timer = document.getElementById("timeRem")
 // var time = 25
 
+function startGame() {
+	let nav = document.getElementsByClassName("navbar")
+	let body = document.getElementById("bodyContainer")
+	let answerBox = document.getElementById("answers")
+	let open = document.getElementById("opening")
+	open.classList.add("display")
+	nav.classList.remove("display")
+	answerBox.classList.remove("display")
+	body.classList.remove("display")
+	// let interval = setInterval(function () {
+	// 	if (time === 0) {
+	// 		showScore()
+	// 		return
+	// 	}
+	// 	time--
+	// 	timer.textContent = time
+	// }, 1000)
+}
+startGame()
+let nav = document.getElementsByClassName("navbar")
+let body = document.getElementById("bodyContainer")
+let answerBox = document.getElementById("answers")
+let open = document.getElementById("opening")
+$("#start")
+	.on("click", function startGame() {
+		// let interval = setInterval(function () {
+		// 	if (time === 0) {
+		// 		showScore()
+		// 		return
+		// 	}
+		// 	time--
+		// 	timer.textContent = time
+		// }, 1000)
+	})
+	.then(function () {
+		open.classList.add("display")
+		nav.classlist.remove("display")
+		nav.classlist.add("navbar")
+		answerBox.classlist.remove("display")
+		body.classlist.remove("display")
+	})
 // Results
 // var correct = 0;
 // var score = 0;
@@ -63,4 +106,45 @@ $("#input").on("click", function (event) {
 		.then(function () {
 			console.log("Success!")
 		})
+})
+// let correctAnswers = 0
+
+$("#submit").on("click", function (event) {
+	console.log("test")
+	event.preventDefault()
+	let inputWordHolder = []
+	let answerWordHolder = []
+
+	// iterates through individual words of emoji codes
+	function inputWordSplitter(res, req) {
+		let inputWords = req.body.split(" ")
+		for (let i = 0; i < inputWords.length; i++) {
+			inputWordHolder.push({ label: i, value: [] })
+			// wordComparer()
+		}
+	}
+
+	function answerWordSplitter(res) {
+		let selectedAnswer = selected.answers
+		let selectedAnswerWords = selectedAnswer.split(" ")
+
+		for (let k = 0; k < selectedAnswerWords.length; k++) {
+			answerWordHolder.push({ label: k, value: [] })
+			// console.log("currentWord:", currentWord);
+			res.render("game", { answersTable: selectedAnswer })
+		}
+	}
+	inputWordSplitter()
+	answerWordSplitter()
+	// function wordComparer() {
+	// 	for (let m = 0; m < answerWordHolder.length; m++) {
+	// 		var currentAnswerWord = answerWordHolder[m]
+	// 		for (let n = 0; n < inputWordHolder.length; n++) {
+	// 			let currentWord = inputWordHolder[n]
+	// 			if (currentAnswerWord === currentWord) {
+	// 				correctAnswers++
+	// 			}
+	// 		}
+	// 	}
+	// }
 })

@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emoji Pictogram</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+{{!-- s --}}
     <!--Nav Bar (will show the entire time)-->
     <header>
-        <div class="navbar">
+        <div class="navbar display">
             <h1 id="gameName">Pictomoji</h1>
             <nav>
                 <ul>
@@ -21,24 +12,16 @@
         </div>
     </header>
 
-    <!--Sign up-->
-    <form>
-        <div id="signUp">
-            <p>Enter Username</p>
-            <input type="text" placeholder="Username" required>
-        </div>
-    </form>
-
     <!--Opening-->
-    <div id="opening">
+    <div id="opening" class = "">
         <!--Opening text-->
-        <h4>Rules or some stuff</h4>
+        <h4>The start button will begin your Emoji game. You will be given a "question" consisting of one or more emojis which you must interpret into text. Single emoji "questions" will only require you to correctly identify them, but if there are multiple emojis, they will combine to form a commonly used phrase or saying. Your score is based upon the time required to input your answer * the difficulty of the question. Good luck!</h4>
         <!--Start button-->
         <button id="start" onclick="startGame()">Start</button>
     </div>
 
     <!--Game container-->
-    <div id="bodyContainer">
+    <div id="bodyContainer" class= "display">
         <div id="gameplay">
             <!--Timer-->
             <div id="timer" class="timer">
@@ -46,21 +29,23 @@
             </div>
 
             <!--Question-->
-            <div id="questionOutput">How many potatoes does it take?</div>
+            <div id="questionOutput">I should be here{{#each questionsTable}}
+    {{this}}
+    {{/each}}</div>
 
             <div id="inputSect">
                 <!--Player Input-->
                 <div id="input">
                     <input type="text" placeholder="Answer Here!" required>
                 </div>
-        
+
                 <!--Submit answer button-->
                 <button id="submit">Submit</button>
             </div>
         </div>
 
         <!--Answer Reveal Output-->
-        <div id="answers">
+        <div id="answers" class= "display">
             <!--Answer in plain text-->
             <div id="answerOutput" class="output"></div>
             <!--Answer as an emoji-->
@@ -70,11 +55,11 @@
 
     </div>
 
-    <!--JS sources-->
+    {{!-- <!--JS sources-->
     <script src="index.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
-</html>
+</html> --}}
