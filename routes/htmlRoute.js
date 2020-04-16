@@ -13,22 +13,20 @@ module.exports = function (app) {
 
 	// index route loads index.html
 	app.get("/", function (req, res) {
-		// res.sendFile(path.join(__dirname, '../views/index.html'))
-		res.render("index")
+		res.render("index.handlebars")
 	})
 
 	// questions route loads questionsInput.handlebars
 	app.get("/questionsInput", function (req, res) {
 		res.render("questionsInput.handlebars")
 	})
-
-	// // game route loads game.html
-	// app.get('/game', function (req, res) {
-	// 	res.sendFile(path.join(__dirname, '../views/game.html'))
-	// })
-
-	// // index route loads index.html
-	// app.get('/index', function (req, res) {
-	// 	res.sendFile(path.join(__dirname, '../views/index.html'))
+	app.get("/game", function (req, res) {
+		res.render("game.handlebars")
+	})
+	app.get("/signup", function (req, res) {
+		res.render("signup.handlebars")
+	})
+	// app.get('/signup', function (req, res) {
+	// 	res.render('signup.handlebars')
 	// })
 }

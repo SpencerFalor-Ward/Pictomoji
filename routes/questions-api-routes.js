@@ -36,7 +36,9 @@ module.exports = function (app) {
 					question.push(String.fromCodePoint("0x" + selectedEmojis[i]))
 					console.log("test2:" + question)
 				}
-				res.render("index", { questionsTable: question })
+
+				res.render("game", { questionsTable: question })
+
 				console.log("test3:" + { questionsTable: question })
 			})
 	})
@@ -53,3 +55,4 @@ module.exports = function (app) {
 		})
 	})
 }
+// module.exports = selected

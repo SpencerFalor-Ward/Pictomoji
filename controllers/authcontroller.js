@@ -6,9 +6,9 @@ exports.signin = function (req, res) {
 	res.render("signin")
 }
 
-exports.dashboard = function (req, res) {
+exports.game = function (req, res) {
 	console.log(req.user)
-	res.render("dashboard", req.user)
+	res.render("game", req.user)
 }
 
 exports.logout = function (req, res) {
