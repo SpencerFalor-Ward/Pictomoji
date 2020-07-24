@@ -7,115 +7,134 @@ background-color: #2d31fc;
   display: table;
 }*/
 
-body{
-    text-align: center;
-    line-height:30px;
-    background-color: #5dcca7;
-    position: relative;
+body {
+	text-align: center;
+	line-height: 30px;
+	background-color: rgb(255, 255, 0);
+	position: relative;
 }
 
-.navbar{
-    margin-top: 10px;
+.navbar {
+	margin-top: 10px;
+	color: rgb(255, 255, 0);
 }
 
-#rulesButton,
-#leaderboard{
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 20px;
-    border: solid 2px;
-    border-color: rgb(139, 46, 46);
-    padding: 5px;
-    background-color: rgb(139, 46, 46);
-    border-radius: 10px;
+#rulesButton {
+	display: inline-block;
+	margin-top: 25%;
+	font-size: 20px;
+	border: solid 2px;
+	border-color: rgb(255, 255, 0);
+	color: rgb(255, 255, 0);
+	padding: 5px;
+	background-color: rgb(0, 0, 0);
+	border-radius: 10px;
 }
 
-h1{
-    font-size: 40px;
+h1 {
+	font-size: 40px;
 }
 
-header{
-    width: 20%;
-    height: 720px;
-    background-color: rgb(252, 89, 89);
-    float: left;
+header {
+	width: 20%;
+	height: 720px;
+	background-color: rgb(0, 0, 0);
+	float: left;
 }
 
-#bodyContainer{
-    float: right;
-    width: 80%;
-    height: 720px;
-    background-color: salmon;
+#bodyContainer {
+	float: right;
+	width: 80%;
+	height: 720px;
+	background-color: rgb(255, 255, 0);
 }
 
-.timer{
-    float: right;
-    margin-right: 10px;
-    font-size: 20px;
-    border-style: double;
-    border-color: rgb(255, 18, 18);
-    border-width: 5px;
-    padding: 3px;
+.rules-content {
+	color: rgb(255, 255, 0);
+	font-size: 2vw;
+	line-height: 1.6;
+	margin-top: 10%;
+	width: 80%;
+	margin-left: 50%;
+	transform: translate(-50%);
 }
 
-#questionOutput{
-    font-size: 40px;
-    margin: 10px;
+.timer {
+	float: right;
+	margin-right: 10px;
+	font-size: 20px;
+	border-style: double;
+	border-color: rgb(0, 0, 0);
+	border-width: 5px;
+	border-radius: 5px;
+	padding: 3px;
 }
 
-#inputSect{
-    width: 35%;
-    margin-top: 15%;
-    height: 200px;
+#questionOutput {
+	font-size: 40px;
+	margin: 10px;
 }
 
-#input input{
-    height: 170px;
-    outline: none;
-    background-color: rgb(255, 205, 199);
-    border-style: double;
-    border-width: 7px;
-    border-radius: 10px;
-    width: 70%;
-    text-align: center;
-    border-color: rgb(255, 18, 18);
-    font-size: 20px;
-    outline: none;
+#inputSect {
+	width: 60%;
+	margin-top: 15%;
+	height: 200px;
 }
 
-input::placeholder{
-    color: black;
-    font-size: 20px;
+#input input,
+#questionOutput {
+	height: 170px;
+	outline: none;
+	background-color: rgb(255, 255, 0);
+	border-style: dotted;
+	border-width: 7px;
+	border-radius: 10px;
+	width: 60%;
+	text-align: center;
+	color: rgb(0, 0, 0);
+	font-size: 20px;
+	outline: none;
+	margin-left: 35%;
+	transform: translate(-50%);
 }
 
-#inputSect button{
-    height: 30px;
-    border-color: rgb(255, 108, 108);
-    border-style: solid;
-    font-size: 17px;
-    width: 30%;
-    background-color: rgb(255, 205, 199);
-    margin-top: 5px;
-    padding: 3px;
-    outline: none;
+input::placeholder {
+	color: black;
+	font-size: 20px;
 }
 
-#answers{
-    width: 35%;
-    height: 200px;
-    background-color: chartreuse;
-    margin: 5px;
-    margin-left: 50%;
+#inputSect button {
+	height: 30px;
+	border-color: rgb(0, 0, 0);
+	color: rgb(0, 0, 0);
+	border-style: dotted;
+	font-size: 17px;
+	width: 30%;
+	background-color: rgb(255, 255, 0);
+	margin-top: 5px;
+	padding: 3px;
+	outline: none;
 }
 
-
-
-
-
-form{
-    display: none;
+.answers {
+	width: 35%;
+	height: 200px;
+	background-color: chartreuse;
+	margin: 5px;
+	margin-left: 50%;
+	display: flex;
 }
 
-#opening{
-    display: none;
+form {
+	display: none;
+}
+
+#opening {
+	display: none;
+}
+
+.game-container {
+	width: 80%;
+	margin-left: 50%;
+	transform: translate(-50%);
 }
